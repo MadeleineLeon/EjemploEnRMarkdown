@@ -15,13 +15,13 @@ library(ggmap)
 
 ```{r GenerarDatos, message=FALSE}
 # Llenar informaci??n (s??lo lo que est?? entre "").
-clave.unica <- rep("125154",3)
+clave.unica <- rep("83222",3)
 # 1: Si es mixto, 0: no lo es.
 es.mixto <- c(universidad = 1, preparatoria = 1, secundaria = 1)
 # Llenar con la direcci??n.
 universidad <- geocode("ITAM")
-preparatoria <- geocode("Cerro del Hombre 18,  Romero de Terreros 04310")
-secundaria <- geocode("Cerro del Hombre 18, Romero de Terreros 04310")
+preparatoria <- geocode("Insurgentes Norte 1698, Lindavista 07300")
+secundaria <- geocode("Callao 842, Lindavista")
 # Generamos la informaci??n
 educacion <- rbind(universidad, preparatoria, secundaria)
 educacion <- cbind(clave.unica, es.mixto, educacion)
